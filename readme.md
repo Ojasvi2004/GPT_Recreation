@@ -13,7 +13,7 @@ The goal is to understand how modern LLMs like GPT-2 work internally by implemen
 
 ---
 
-## 🚀 Features
+##  Features
 
 * Custom GPT architecture (decoder-only transformer)
 * Multi-head causal self-attention using fused PyTorch kernels
@@ -27,7 +27,7 @@ The goal is to understand how modern LLMs like GPT-2 work internally by implemen
 
 ---
 
-## 🧠 Model Architecture
+##  Model Architecture
 
 The model is a simplified GPT-style transformer composed of:
 
@@ -57,7 +57,7 @@ This configuration is intentionally small so it can train on consumer GPUs.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 .
@@ -70,7 +70,7 @@ This configuration is intentionally small so it can train on consumer GPUs.
 
 ---
 
-## 📦 Requirements
+##  Requirements
 
 * Python 3.10+
 * PyTorch (CUDA recommended)
@@ -86,7 +86,7 @@ pip install torch numpy transformers tiktoken
 
 ---
 
-## 🗃 Dataset Preparation
+##  Dataset Preparation
 
 The dataloader expects tokenized data stored as `.bin` files containing GPT-2 token IDs (`uint16`).
 
@@ -104,7 +104,7 @@ The dataloader streams directly from disk using memory mapping, so large dataset
 
 ---
 
-## 🏋️ Training
+##  Training
 
 Run training:
 
@@ -124,9 +124,9 @@ If a checkpoint exists, training resumes automatically.
 
 ---
 
-## 💾 Checkpoints
+##  Checkpoints
 
-The model saves:
+The model saves the state in:
 
 ```
 gpt_checkpoint.pth
@@ -141,7 +141,7 @@ This allows seamless resume of training.
 
 ---
 
-## ✨ Inference (Text Generation)
+##  Inference (Text Generation)
 
 After training, the script generates text from a prompt:
 
@@ -149,7 +149,7 @@ After training, the script generates text from a prompt:
 prompt = "Once upon a time,"
 ```
 
-The model samples tokens autoregressively and writes output to:
+The model samples tokens autoregressively and writes output to this file:
 
 ```
 generated.txt
@@ -159,7 +159,7 @@ Multiple sequences are generated using probabilistic sampling.
 
 ---
 
-## ⚙️ Optimization Techniques Used
+##  Optimization Techniques Used
 
 * Scaled dot-product attention (kernel fusion)
 * Gradient clipping
@@ -172,7 +172,7 @@ These techniques improve speed and memory efficiency.
 
 ---
 
-## 🎯 Learning Goals
+##  Learning Goals
 
 This project is designed to:
 
@@ -185,7 +185,7 @@ It’s ideal for students and engineers learning deep learning systems.
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 * Distributed training (DDP)
 * Flash attention
@@ -196,13 +196,13 @@ It’s ideal for students and engineers learning deep learning systems.
 
 ---
 
-## 📜 License
+##  License
 
 MIT License
 
 ---
 
-## 🙌 Acknowledgements
+##  Acknowledgements
 
 Inspired by GPT architecture and modern transformer research.
 Built for educational purposes to explore large language models.
